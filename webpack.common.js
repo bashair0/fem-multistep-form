@@ -11,6 +11,7 @@ module.exports = {
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
+    assetModuleFilename: 'images/[hash][ext][query]',
     clean: true
   },
   module: {
@@ -29,6 +30,10 @@ module.exports = {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
 
         type: 'asset/resource'
+      },
+      {
+        test: /\.html$/,
+        use: ['html-loader']
       }
     ]
   }
