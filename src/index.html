@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png" />
+
+    <title>Frontend Mentor | Multi-step form</title>
+  </head>
+  <body class="flex">
+    <!-- Sidebar start -->
+    <form action="#" method="post" class="form | flex" data-form>
+      <!-- PROGRESS BAR -->
+      <div class="progress-bar">
+        <div class="progress-step">
+          <div class="progress-step__num progress-step-active"></div>
+          <div class="progress-step__title">
+            <h3 class="">step 1</h3>
+            <p class="">Your info</p>
+          </div>
+        </div>
+        <div class="progress-step">
+          <div class="progress-step__num"></div>
+          <div class="progress-step__title">
+            <h3 class="">step 2</h3>
+            <p class="">Select Plan</p>
+          </div>
+        </div>
+        <div class="progress-step">
+          <div class="progress-step__num"></div>
+          <div class="progress-step__title">
+            <h3 class="">step 3</h3>
+            <p class="">Add-ons</p>
+          </div>
+        </div>
+        <div class="progress-step">
+          <div class="progress-step__num"></div>
+          <div class="progress-step__title">
+            <h3 class="">step 4</h3>
+            <p class="">Summary</p>
+          </div>
+        </div>
+      </div>
+      <!-- Sidebar end -->
+
+      <!-- Step 1 start -->
+      <section class="form-step form-step-active">
+        <!-- HEADINGS -->
+        <div class="heading">
+          <h1 class="text-primary-900 fw-bold fs-p-heading">Personal info</h1>
+          <p class="text-neutral-500 fs-s-heading">
+            Please provide your name, email address, and phone number.
+          </p>
+        </div>
+
+        <!-- INPUTS AND LABELS -->
+        <div class="form-info">
+          <div class="input-group">
+            <div class="flex">
+              <label for="name"
+                >Name <span aria-label="required">*</span></label
+              >
+              <p class="empty-error-msg" data-userName-err></p>
+            </div>
+
+            <input
+              type="text"
+              name="user-name"
+              placeholder="e.g.Stephen King"
+              id="name"
+              required />
+          </div>
+          <div class="input-group">
+            <div class="flex">
+              <label for="email"
+                >Email Address <span aria-label="required">*</span></label
+              >
+              <p class="empty-error-msg" data-email-err></p>
+            </div>
+
+            <input
+              type="email"
+              name="email"
+              placeholder="e.g.StephenKing@lorem.com"
+              id="email"
+              required />
+          </div>
+          <div class="input-group">
+            <div class="flex">
+              <label for="phone"
+                >Phone Number <span aria-label="required">*</span></label
+              >
+              <p class="empty-error-msg" data-phone-err></p>
+            </div>
+
+            <input
+              class="required"
+              type="number"
+              name="phone-number"
+              placeholder="e.g. +1 234 567 890"
+              id="phone"
+              required />
+          </div>
+        </div>
+
+        <!-- BUTTONS BOX -->
+        <div class="btn-box">
+          <button type="button" class="btn btn-next ml-auto" data-info-next-btn>
+            Next Step
+          </button>
+        </div>
+        <!-- END OF FORM STEP -1 -->
+      </section>
+      <!-- Step 1 end -->
+
+      <!-- Step 2 start -->
+      <section class="form-step">
+        <!-- HEADINGS -->
+        <div class="heading">
+          <h1 class="text-primary-900 fw-bold fs-p-heading">
+            Select your plan
+          </h1>
+          <p class="text-neutral-500 fs-s-heading">
+            You have the option of monthly or yearly billing.
+          </p>
+        </div>
+
+        <!-- CARDS AND SWITCH -->
+
+        <div class="form-info">
+          <div class="plan-cards monthly-plan | flex">
+            <label for="arcade" class="plan-card plan-selected">
+              <input
+                type="radio"
+                name="Add-ons"
+                value="Arcade"
+                data-price-value="9"
+                id="arcade"
+                checked />
+              <div class="card-img">
+                <img src="assets/images/icon-arcade.svg" alt="arcade icon" />
+              </div>
+              <div class="card-info">
+                <h3 class="fw-bold">Arcade</h3>
+                <p class="monthly-price | text-neutral-500 fw-semi-bold">
+                  $9/mo
+                </p>
+                <p class="yearly-price | text-neutral-500 fw-semi-bold">
+                  $90/yr
+                </p>
+                <p class="special-deal | text-primary-800 fw-semi-bold">
+                  2 months free
+                </p>
+              </div>
+            </label>
+            <label for="advanced" class="plan-card">
+              <input
+                type="radio"
+                name="Add-ons"
+                value="Advanced"
+                data-price-value="12"
+                id="advanced" />
+              <div class="card-img">
+                <img src="assets/images/icon-advanced.svg" alt="" />
+              </div>
+              <div class="card-info">
+                <h3 class="fw-bold">Advanced</h3>
+                <p class="monthly-price | text-neutral-500 fw-semi-bold">
+                  $12/mo
+                </p>
+                <p class="yearly-price | text-neutral-500 fw-semi-bold">
+                  $120/yr
+                </p>
+                <p class="special-deal | text-primary-800 fw-semi-bold">
+                  2 months free
+                </p>
+              </div>
+            </label>
+            <label for="pro" class="plan-card">
+              <input
+                type="radio"
+                name="Add-ons"
+                value="Pro"
+                data-price-value="15"
+                id="pro" />
+              <div class="card-img">
+                <img src="assets/images/icon-pro.svg" alt="" />
+              </div>
+              <div class="card-info">
+                <h3 class="fw-bold">Pro</h3>
+                <p class="monthly-price | text-neutral-500 fw-semi-bold">
+                  $15/mo
+                </p>
+                <p class="yearly-price | text-neutral-500 fw-semi-bold">
+                  $150/yr
+                </p>
+                <p class="special-deal | text-primary-800 fw-semi-bold">
+                  2 months free
+                </p>
+              </div>
+            </label>
+          </div>
+          <div class="plan-switch | flex">
+            <h3 class="monthly | plan-active">Monthly</h3>
+            <label class="switch">
+              <input type="checkbox" id="plan-switcher" />
+              <span class="slider round"></span>
+            </label>
+            <h3 class="yearly">Yearly</h3>
+          </div>
+        </div>
+
+        <!-- BUTTONS BOX -->
+        <div class="btn-box | flex">
+          <button type="button" class="btn btn-prev">Go Back</button>
+          <button type="button" class="btn btn-next">Next Step</button>
+        </div>
+      </section>
+
+      <!-- Step 2 end -->
+
+      <!-- Step 3 start -->
+      <section class="form-step">
+        <!-- HEADINGS -->
+        <div class="heading">
+          <h1 class="text-primary-900 fw-bold fs-p-heading">Pick add-ons</h1>
+          <p class="text-neutral-500 fs-s-heading">
+            Add-ons help enhance your gaming experience
+          </p>
+        </div>
+
+        <!-- PICK ADD_ONS -->
+
+        <div class="form-info">
+          <label class="pick | flex">
+            <div class="pick-check">
+              <input
+                class="plan"
+                type="checkbox"
+                name="add-ons"
+                id="online-service"
+                value="online service"
+                data-service-price="1" />
+              <div class="pick-info">
+                <label for="online-service">Online service</label>
+                <p>Access to multiplayer games</p>
+              </div>
+            </div>
+            <p class="text-primary-700" data-onlineService-price>+$1/mo</p>
+          </label>
+          <label class="pick | flex">
+            <div class="pick-check">
+              <input
+                class="plan"
+                type="checkbox"
+                name="add-ons"
+                id="larger-storage"
+                value="larger storage"
+                data-service-price="2" />
+              <div class="pick-info">
+                <label for="larger-storage">Larger storage</label>
+                <p>Extra 1TB of cloud save</p>
+              </div>
+            </div>
+            <p class="text-primary-700" data-largeStorage-price>+$2/mo</p>
+          </label>
+          <label class="pick | flex">
+            <div class="pick-check">
+              <input
+                class="plan"
+                type="checkbox"
+                name="add-ons"
+                id="custom-profile"
+                value="Customizable profile"
+                data-service-price="2" />
+              <div class="pick-info">
+                <label for="custom-profile">Customizable profile</label>
+                <p>Custom theme on your profile</p>
+              </div>
+            </div>
+            <p class="text-primary-700" data-customProfile-price>+$2/mo</p>
+          </label>
+        </div>
+
+        <!-- BUTTONS BOX -->
+        <div class="btn-box | flex">
+          <button type="button" class="btn btn-prev">Go Back</button>
+          <button type="button" class="btn btn-next">Next Step</button>
+        </div>
+      </section>
+      <!-- Step 3 end -->
+
+      <!-- Step 4 start -->
+      <section class="form-step" data-sum-page>
+        <!-- HEADINGS -->
+        <div class="heading">
+          <h1 class="text-primary-900 fw-bold fs-p-heading">Finishing up</h1>
+          <p class="text-neutral-500 fs-s-heading">
+            Double-check everything looks OK before confirming.
+          </p>
+        </div>
+
+        <!-- SELECTION CONTAINER -->
+        <div class="selection-box">
+          <div class="selection-container">
+            <div class="selected-plan | flex">
+              <div>
+                <div class="flex">
+                  <p
+                    id="plan"
+                    class="plan-name | text-primary-900 fw-bold fs-s-heading"
+                    data-plan-name>
+                    Arcade
+                  </p>
+                  <p
+                    class="plan-type | text-primary-900 fw-bold fs-s-heading"
+                    data-plan-type></p>
+                </div>
+                <button type="button" class="change-btn" data-change-btn>
+                  Change
+                </button>
+              </div>
+
+              <div>
+                <p
+                  class="selected-plan-price | text-primary-900 fw-bold"
+                  data-selected-plan-price></p>
+              </div>
+            </div>
+            <hr />
+            <div class="addons">
+              <!-- <template> -->
+              <!-- <div class="selected-addons">
+                <p
+                  class="service-name | text-neutral-500"
+                  data-service-name></p>
+                <p
+                  class="service-price | text-primary-800 fw-semi-bold"
+                  data-service-value></p>
+              </div> -->
+              <!-- <div class="selected-addons">
+                <p class="service-name | text-neutral-500"></p>
+                <p class="service-price | text-primary-800 fw-semi-bold"></p>
+              </div>
+              <div class="selected-addons">
+                <p class="service-name | text-neutral-500"></p>
+                <p class="service-price | text-primary-800 fw-semi-bold"></p>
+              </div> -->
+              <!-- </template> -->
+            </div>
+          </div>
+          <div class="total-box">
+            <p class="total | text-neutral-500" data-total></p>
+            <p
+              class="total-price | text-primary-700 fw-bold"
+              data-total-price></p>
+          </div>
+        </div>
+
+        <!-- BUTTONS BOX -->
+        <div class="btn-box | flex">
+          <button class="btn btn-prev">Go Back</button>
+          <button type="submit" class="btn btn-next btn-conf">Confirm</button>
+        </div>
+      </section>
+
+      <!-- Step 4 end -->
+
+      <!-- Step 5 start -->
+      <section class="form-step" data-finishing-page>
+        <div class="flex finishing-page">
+          <img src="assets/images/icon-thank-you.svg" alt="" />
+          <h2 class="text-primary-900 fw-bold fs-p-heading">Thank you!</h2>
+          <p class="finishing-p">
+            Thanks for confirming your subscription! We hope you have fun using
+            our platform. if you ever need support, please feel free to email us
+            at support@loremgaming.com.
+          </p>
+        </div>
+      </section>
+      <!-- Step 5 end -->
+    </form>
+  </body>
+</html>
