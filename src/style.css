@@ -148,6 +148,10 @@ input:focus {
   border-color: var(--clr-primary-500);
 }
 
+input:focus.red-border {
+  border-color: var(--clr-secondary-900);
+}
+
 .red-border {
   border-color: var(--clr-secondary-900);
 }
@@ -166,6 +170,7 @@ input:focus {
 
 .input-group > .flex {
   justify-content: space-between;
+  align-items: center;
 }
 
 .empty-error-msg {
@@ -175,6 +180,7 @@ input:focus {
   border-color: var(--clr-secondary-900);
   font-size: var(--fs-300);
   font-weight: 700;
+  max-width: 35ch;
 }
 
 .display {
